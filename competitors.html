@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Competitors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="content" id="content">
+            <h2>Congratulations!</h2>
+            <p>Those are the competitors you selected:</p>
+            <ul id="selectedItems"></ul>
+        </div>
+    </div>
+    <script>
+        var resultArr = window.location.search.replace('?', '').replace(/=on/g, '').split('&');
+        for (var item = 0; item < resultArr.length; item++) {
+            console.log(resultArr[item]);
+            document.getElementById('selectedItems').innerHTML += `
+                <li>
+                <img src="https://www.google.com/s2/favicons?domain=${resultArr[item]}"> ${resultArr[item]}
+                </li>
+            `;
+        }
+
+    </script>
+</body>
+
+</html>

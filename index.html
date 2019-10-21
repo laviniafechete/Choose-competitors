@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Competitors</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="steps">
+            <li><span>1</span><span><a href="#"></a></span><span>AddWebsite</span></li>
+            <li><span>2</span><span><a href="#"></a></span><span>Analytics&amp;GCS</span></li>
+            <li class="active" id="third_step"><span>3</span><span><a href="#"></a></span><span>Competitors</span></li>
+            <li class="inactive" id="fourth_step"><span>4</span><span><a href="#"></a></span><span>Finish Setup</span></li>
+        </ul>
+        <h2>Competitors</h2>
+        <div class="content">
+            <h3>Choose your competitors</h3>
+            <hr>
+            <h3><span>Please select up to 5 competitors: </span><span class="additional">Don't worry, we monitor all of your competitors from day 1, so you'll be able to add more and cnahnge them later without losing any historical data.</span></h3>
+            <div id="competitors">
+                <form id="competitors-list" action="competitors.html" method="GET">
+                    <button id="next_step" disabled>Next step</button>
+                </form>
+            </div>
+            <div id="alt"></div>
+            <h3>Add a competitor</h3>
+            <div id="addWebsite"><label for="">Website</label>
+                <input type="text" id="siteName">
+                <button type="text" value="+" id="submitSite">+</button>
+                <p id="error_duplicate" class="hidden">This Competitor already exists in list.</p>
+                <p id="error_valid_url" class="hidden">You have to enter a valid URL (i.e emag.ro).</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
